@@ -21,29 +21,7 @@ document.getElementById('formulario').addEventListener("submit", (event) => {
 
 });
 
-// async function criaEvento(inputs) { 
-//     let evento = await fetch('https://xp41-soundgarden-api.herokuapp.com/events', {
-//          method: 'POST', 
-//          body: JSON.stringify(inputs), 
-//          headers: { 'content-type':'application/json' } 
-//         } ) 
-//     } 
-    
-    
-//     document.getElementById("formulario").addEventListener('submit', function(evento) { 
-//         evento.preventDefault() 
-//         let inputs ={} 
-        
-//         inputs.name = document.querySelector('#nome').value; 
-//         inputs.poster = document.querySelector('#poster').value; 
-//         inputs.attractions = document.querySelector('#atracoes').value.split(','); 
-//         inputs.description = document.querySelector('#descricao').value; 
-//         inputs.scheduled = document.querySelector('#data').value; 
-//         inputs.scheduled = new Date(inputs.scheduled).toISOString(); 
-//         inputs.number_tickets = document.querySelector('#lotacao').value; 
-//         criaEvento(inputs) 
-    
-//     }) 
+
 
 
 
