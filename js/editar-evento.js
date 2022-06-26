@@ -5,7 +5,7 @@ var descricao = document.getElementById('descricao');
 var dataLista = document.getElementById('data');
 var lotacao = document.getElementById('lotacao');
 
-document.getElementById('formulario').addEventListener("submit", (event) => {
+document.getElementById('buttonSolicitar').addEventListener("click", (event) => {
     event.preventDefault()
     var id = document.getElementById('idDoEvento').value;
 
@@ -25,16 +25,19 @@ document.getElementById('formulario').addEventListener("submit", (event) => {
         })
         .catch(function (error) {
             console.error(error.message)
-        })
+        });
     }));
+});
 
+// document.getElementById('buttonEnviar').addEventListener("click", (event) => {
+//     event.preventDefault()
     // let post = {}
 
     // (nome.value != {}) ? post.name = nome.value : {};
     // (poster.value != {}) ? post.poster = poster.value : {};
     // (atracoes.value != {}) ? post.attractions = atracoes.value.split(',') : {};
     // (descricao.value != {}) ? post.description = descricao.value : {};
-    // (data.value != {}) ? post.scheduled = data.value.toISOString() : {};
+    // (dataLista.value != {}) ? post.scheduled = dataLista.value.toISOString() : {};
     // (lotacao.value != {}) ? post.number_tickets = lotacao.value : {};
 
     // console.log("esse é o meu objeto", post)
@@ -45,7 +48,9 @@ document.getElementById('formulario').addEventListener("submit", (event) => {
     //     headers: {'content-type':'application/json'}
     // }).then((back) => console.log(back))
 
-});
+// });
+
+
 
 
 
