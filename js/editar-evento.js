@@ -29,26 +29,28 @@ document.getElementById('buttonSolicitar').addEventListener("click", (event) => 
     }));
 });
 
-// document.getElementById('buttonEnviar').addEventListener("click", (event) => {
-//     event.preventDefault()
-    // let post = {}
+document.getElementById('buttonEnviar').addEventListener("click", (event) => {
+    event.preventDefault()
+    var id = document.getElementById('idDoEvento').value;
+    let post = {}
 
-    // (nome.value != {}) ? post.name = nome.value : {};
-    // (poster.value != {}) ? post.poster = poster.value : {};
-    // (atracoes.value != {}) ? post.attractions = atracoes.value.split(',') : {};
-    // (descricao.value != {}) ? post.description = descricao.value : {};
-    // (dataLista.value != {}) ? post.scheduled = dataLista.value.toISOString() : {};
-    // (lotacao.value != {}) ? post.number_tickets = lotacao.value : {};
+    post.name = nome.value;
+    post.poster = poster.value;
+    post.attractions = atracoes.value.split(',');
+    post.description = descricao.value;
+    post.scheduled = dataLista.value;
+    post.scheduled = new Date(post.scheduled).toISOString();
+    post.number_tickets= lotacao.value;
 
-    // console.log("esse é o meu objeto", post)
+    console.log("esse é o meu objeto", post)
 
-    // fetch("https://xp41-soundgarden-api.herokuapp.com/events", {
-    //     method: "PUT", 
-    //     body: JSON.stringify(post),
-    //     headers: {'content-type':'application/json'}
-    // }).then((back) => console.log(back))
+    fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${id}`, {
+        method: "PUT", 
+        body: JSON.stringify(post),
+        headers: {'content-type':'application/json'}
+    }).then((back) => console.log(back))
 
-// });
+});
 
 
 
