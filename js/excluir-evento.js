@@ -35,6 +35,10 @@ document.getElementById('buttonExcluir').addEventListener("click", (event) => {
 
     fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${id}`, {
         method: "DELETE"
-    }).then((back) => console.log(back))
-
+    }).then(function (back) { 
+        console.log(back)
+        if (back.status == 204) {
+            window.alert('Seu evento foi excluido com sucesso!')
+        };
+});
 });

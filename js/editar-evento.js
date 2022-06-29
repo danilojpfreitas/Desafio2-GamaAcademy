@@ -48,7 +48,12 @@ document.getElementById('buttonEnviar').addEventListener("click", (event) => {
         method: "PUT", 
         body: JSON.stringify(post),
         headers: {'content-type':'application/json'}
-    }).then((back) => console.log(back))
+    }).then(function (back) { 
+        console.log(back)
+        if (back.status == 200) {
+            window.alert('Seu evento foi editado com sucesso!')
+        }
+})
 
 });
 

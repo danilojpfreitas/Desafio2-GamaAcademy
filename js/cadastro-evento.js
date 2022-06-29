@@ -17,9 +17,15 @@ document.getElementById('formulario').addEventListener("submit", (event) => {
         method: "POST", 
         body: JSON.stringify(post),
         headers: {'content-type':'application/json'}
-    }).then((back) => console.log(back))
+    }).then(function (back) { 
+        console.log(back)
+        if (back.status == 201) {
+            window.alert('Seu evento foi cadastrado com sucesso!')
+        }
+});
 
 });
+
 
 
 

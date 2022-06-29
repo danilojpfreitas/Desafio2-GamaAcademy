@@ -55,10 +55,10 @@
             </aside>
             <main class="col-9  p-5">
                 <div class="my-5">
-                    <h1>Rereservas</h1>
+                    <h1>Reservas</h1>
                 </div>
                 <div class="mb-3">
-                    <label for="idDoEvento" class="form-label">Digite o ID</label>
+                    <label for="idDoEvento" class="form-label">Digite o ID do evento</label>
                     <input type="text" class="form-control" id="idDoEvento" aria-describedby="ID">
                 </div>
                 <button type="submit" class="btn btn-primary" id="buttonSolicitar">solicitar</button>
@@ -68,8 +68,7 @@
                             <tr>
                                 <th scope="col">Título</th>
                                 <th scope="col">Data</th>
-                                <th scope="col">Atrações</th>
-                                <th scope="col">Reservas</th>
+                                <th scope="col">Ingressos</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,17 +77,26 @@
                                     <span for="nome" class="form-label" id="nome">---</span>
                                 </th>
                                 <td>
-                                    <span for="nome" class="form-label" id="scheduled">---</span>
-                                </td>
-                                <td>
-                                    <span for="nome" class="form-label" id="attractions">---</span>
+                                    <strong><span for="nome" class="form-label" id="scheduled">---</span></strong>
                                 </td>
                                 <td>
                                     <strong><span for="nome" class="form-label" id="number_tickets">---</span></strong>
                                 </td>
                             </tr>
                         </tbody>
+                    </table>
 
+                        <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Reserva</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Tickets</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reserva"></tbody>
                     </table>
                 </div>
             </main>
