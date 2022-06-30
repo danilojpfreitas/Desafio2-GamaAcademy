@@ -26,32 +26,7 @@
             <div class="container text-center">
                 <h2>Próximos eventos</h2>
             </div>
-            <div class="container d-flex justify-content-center align-items-center">
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-            </div>
+            <div id="novoevento" class="container d-flex justify-content-center align-items-center"></div>
             <div class="container text-center">
                 <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
             </div>
@@ -104,6 +79,76 @@
             </nav>
         </div>
     </footer>
+    
+    <div id="modal" class="modal-container">
+        <div>
+            <button class="fechar">x</button>
+            <h3 class="subtitulo">Realizar reserva</h3>
+            <form>
+                <input type="text" class="input" placeholder="Nome">
+                <input type="text" class="input" placeholder="Email">
+                <input type="button" class="button" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .modal-container {
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,.5);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .modal {
+            background: white; 
+            width: 60%;
+            min-width: 300px;
+            padding: 40px;
+            border: 1px solid black; 
+            box-shadow: 0 0 0 10px white;
+            position: relative;
+        }
+
+        @keyframes modal {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -60px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .mostrar .modal {
+            animation: modal .3s;
+        }
+
+        .fechar {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 50px;
+            border: 1px solid white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .modal-container.mostrar {
+            display: flex;
+        }
+    </style>
+
+<script src="./js/index.js"></script>
+
 </body>
 
 </html>
