@@ -13,10 +13,9 @@
                  <h2 id="nome${i}"></h2>
                  <h4 id="attractions${i}"></h4>
                  <p id="description${i}"></p>
-                 <a class="btn btn-primary">reservar ingresso</a>
-             </article>`
+                 <a href="./eventos.html" class="btn btn-primary">reservar ingresso</a>`
 
-                document.getElementById('novoevento').innerHTML += novoElementoHTML
+                document.getElementById('novoEvento').innerHTML += novoElementoHTML
 
                 var nome = document.getElementById(`nome${i}`);
                 var atracoes = document.getElementById(`attractions${i}`);
@@ -32,14 +31,6 @@
             console.error(error.message)
         });
     }));
-
-
-    function iniciamodal (modalid) {
-        const modal = document.getElementById(modalid);
-        modal.classList.add('mostrar');
-    }
-
-    document.getElementsByClassName('btn btn-primary').addEventListener('click', function () {iniciamodal('modal')})
 
 
     
