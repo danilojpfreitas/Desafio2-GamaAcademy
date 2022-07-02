@@ -13,16 +13,16 @@ fetch(`https://xp41-soundgarden-api.herokuapp.com/events`, {
              <h2 id="nome${i}"></h2>
              <h4 id="attractions${i}"></h4>
              <p id="description${i}"></p>
-             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#JanelaModal${i}">reservar ingresso</button>
-             </article>`
-
-             let novoModal = 
-             `<div id="JanelaModal${i}" class="modal">
-              <div class="modal-dialog">
+             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#JanelaModal${i}">reservar ingresso</button>
+             </article>
+             <div id="JanelaModal${i}" class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
                  <div class="modal-content">
                      <div class="modal-header">
                          <p class="modal-title">Digite seus dados para realizar a reserva de ${data[i].name} :)</p>
-                         <button type="button" class="btn btn-close" data-bs-dismiss="modal">x</button>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                         </button>
                      </div>
                      <div class="modal-body">
                          <form class="col-6" id="create-event-form">
@@ -44,7 +44,6 @@ fetch(`https://xp41-soundgarden-api.herokuapp.com/events`, {
              </div>`
 
             document.getElementById('novoEvento').innerHTML += novoElementoHTML
-            document.getElementById('meuModal').innerHTML += novoModal
 
             var nome = document.getElementById(`nome${i}`);
             var atracoes = document.getElementById(`attractions${i}`);
