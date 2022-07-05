@@ -2,10 +2,21 @@ var nome = document.getElementById('nome');
 var dataLista = document.getElementById('scheduled');
 var lotacao = document.getElementById('number_tickets');
 
-document.getElementById('buttonSolicitar').addEventListener("click", (event) => {
-    event.preventDefault()
-    var id = document.getElementById('idDoEvento').value;
+var urlString = window.location;
+var url = new URL(urlString);
+var idi = url.search.substring('?id='.length)
 
+if (idi != undefined) {
+    var id = idi
+    get (id)
+} 
+
+document.getElementById('buttonSolicitar').addEventListener("click", (event) => {
+    id = document.getElementById('idDoEvento').value;
+    get (id)
+})
+
+function get (id) {
     fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${id}`, {
         method: "GET",
         headers: {'content-type':'application/json'}
@@ -69,6 +80,5 @@ document.getElementById('buttonSolicitar').addEventListener("click", (event) => 
         .catch(function (error) {
             console.error(error.message)
         });
-    
     }));
-});
+}
