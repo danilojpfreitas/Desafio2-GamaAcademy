@@ -22,10 +22,10 @@
                 <td>
                     <span for="nome" class="form-label" id="attractions${evento}">---</span>
                 </td>
-                <td>
+                <td style="text-align: center">
                     <a class="btn btn-dark" href="reservas.html?id=${data[evento]._id}">ver reservas</a>
                     <a href="editar-evento.html?id=${data[evento]._id}" class="btn btn-secondary" onclick="${data[evento]._id}">editar</a>
-                    <a href="excluir-evento.html?id=${data[evento]._id}" class="btn btn-danger" onclick="${data[evento]._id}">excluir</a>
+                    <a style="margin-top: 4px" href="excluir-evento.html?id=${data[evento]._id}" class="btn btn-danger" onclick="${data[evento]._id}">excluir</a>
                 </td>
                 </tr>`
 
