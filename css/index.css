@@ -1,0 +1,20 @@
+section.full {
+    min-height: 0;
+}
+
+/* responsividade */
+
+@media(max-width: 1000px) {
+
+    #novoEvento {
+        flex-direction: column;
+    }
+
+    #imgIndex {
+        display: none;
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+}
