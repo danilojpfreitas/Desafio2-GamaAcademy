@@ -1,0 +1,12 @@
+/* responsividade */
+
+@media(max-width: 1000px) {
+
+    #imgIndex {
+        display: none;
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+}
