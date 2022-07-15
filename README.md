@@ -11,7 +11,7 @@
 
 ## Preview do Projeto
 ---
-<img src="">
+<img src="./img/soundGardens.gif">
 <br>
 
 <a href="https://danilojpfreitas.github.io/Desafio2-GamaAcademy/" target="_blank"> Link para visualização do Projeto Sound Garden</a>
